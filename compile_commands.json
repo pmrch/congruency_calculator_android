@@ -1,0 +1,41 @@
+[
+  {
+    "file": "jni/src/main.c",
+    "arguments": [
+      "/home/patrik/code/androidNdkDev/android-sdk/ndk/25.2.9519653/toolchains/llvm/prebuilt/linux-x86_64/bin/clang",
+      "-MMD",
+      "-MP",
+      "-MF",
+      "./obj/local/arm64-v8a/objs/linear-congruency/src/main.o.d",
+      "-target",
+      "aarch64-none-linux-android21",
+      "-fdata-sections",
+      "-ffunction-sections",
+      "-fstack-protector-strong",
+      "-funwind-tables",
+      "-no-canonical-prefixes",
+      "--sysroot",
+      "/home/patrik/code/androidNdkDev/android-sdk/ndk/25.2.9519653/toolchains/llvm/prebuilt/linux-x86_64/sysroot",
+      "-g",
+      "-Wno-invalid-command-line-argument",
+      "-Wno-unused-command-line-argument",
+      "-D_FORTIFY_SOURCE=2",
+      "-fpic",
+      "-O2",
+      "-DNDEBUG",
+      "-Ijni/include",
+      "-Ijni",
+      "-DANDROID",
+      "-O3",
+      "-Weverything",
+      "-Wformat",
+      "-Werror=format-security",
+      "-c",
+      "jni/src/main.c",
+      "-o",
+      "./obj/local/arm64-v8a/objs/linear-congruency/src/main.o"
+    ],
+    "directory": "/home/patrik/code/CongruencyCalculatorAndroid",
+    "output": "./obj/local/arm64-v8a/objs/linear-congruency/src/main.o"
+  }
+]
