@@ -1,0 +1,12 @@
+{
+    "[yaml]": {
+        "editor.formatOnSave": false
+    },
+    "files.associations": {
+        ".clangd": "yaml"
+    },
+    "[clangd]": {
+        "editor.defaultFormatter": null,
+        "editor.formatOnSave": false
+    }
+}

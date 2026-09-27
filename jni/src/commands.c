@@ -2,27 +2,32 @@
 #include "render.h"
 #include "utils.h"
 
-void cmd_init_window(struct android_app *app, Renderer *rnd, int32_t *renderer_initialized) {
-    LOGI("Window initialized");
+void cmd_init_window(struct android_app *app, int32_t *rnd_init) {
+    UserData *data = (UserData *)app->userData;
+    LOGI("%s", "Window initialized");
 
     if (app->window != NULL) {
         int32_t width  = ANativeWindow_getWidth(app->window);
         int32_t height = ANativeWindow_getHeight(app->window);
 
         LOGI("Window size: %d x %d", width, height);
-        *renderer_initialized = rendererInit(app->window, rnd);
+        *rnd_init = rendererInit(app->window, &data->rnd);
 
-        if (*renderer_initialized) { LOGI("Renderer initialized successfully on window creation."); }
+        if (*rnd_init) {
+            LOGI("%s", "Renderer initialized successfully on window creation.");
+            data->nkCtx = nk_gles32_init(&data->gles, app->window, app->activity->assetManager);
+            if (data->nkCtx != NULL) { LOGI("%s", "Successfully initialized Nuklear"); }
+        }
     }
 }
 
 void cmd_activity_destroyed(int32_t *g_running) {
-    LOGI("Activity destroyed");
+    LOGI("%s", "Activity destroyed");
     *g_running = 0;
 }
 
 void cmd_term_window(Renderer *rnd) {
-    LOGI("Window terminated");
+    LOGI("%s", "Window terminated");
     destroyRenderer(rnd);
-    LOGI("Renderer destroyed");
+    LOGI("%s", "Renderer destroyed");
 }

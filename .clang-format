@@ -7,7 +7,7 @@ UseTab: Never
 TabWidth: 4
 
 # Max line length
-ColumnLimit: 135
+ColumnLimit: 145
 
 # Don't reformat the contents of macros
 SkipMacroDefinitionBody: true

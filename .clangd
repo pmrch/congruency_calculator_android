@@ -1,2 +1,15 @@
-CompileFlags:
-    Add: [-Ijni/include, -Weverything]
+CompileFlags: 
+  Add:
+    -Ijni/include, 
+    -Weverything, 
+    -Wno-padded, 
+    -Wno-unsafe-buffer-usage, 
+    -DNK_gles_GL3_IMPLEMENTATION,
+    -DNK_IMPLEMENTATION,
+    -DNK_INCLUDE_DEFAULT_ALLOCATOR, 
+    -DNK_INCLUDE_FONT_BAKING,
+    -DNK_INCLUDE_DEFAULT_FONT,
+    -DNK_INCLUDE_VERTEX_BUFFER_OUTPUT
+    -DSTB_TRUETYPE_IMPLEMENTATION
+  Remove: 
+    -Wunsafe-buffer-usage, -Wpadded

@@ -1,0 +1,8 @@
+[arm64-v8a] Compile        : linear-congruency <= render.c
+[arm64-v8a] Compile        : linear-congruency <= main.c
+[arm64-v8a] Compile        : linear-congruency <= commands.c
+[arm64-v8a] Compile        : linear-congruency <= utils.c
+[arm64-v8a] Compile        : linear-congruency <= android_native_app_glue.c
+[arm64-v8a] Compile        : linear-congruency <= nuklear_android_gles32.c
+[arm64-v8a] SharedLibrary  : liblinear-congruency.so
+[arm64-v8a] Install        : liblinear-congruency.so => libs/arm64-v8a/liblinear-congruency.so

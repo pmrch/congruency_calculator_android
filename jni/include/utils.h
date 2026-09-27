@@ -2,45 +2,44 @@
 #define UTILS_H
 
 #include <stdint.h>
+#include <stdlib.h>
 
 // Android stuff start
 #include <android/log.h>
 #include <android/sensor.h>
 #include <android_native_app_glue.h>
 
+#define LOG_LEVEL ANDROID_LOG_INFO
 #define LOG_TAG "linearconcalc"
-#define LOGI(...) __android_log_print(ANDROID_LOG_INFO, LOG_TAG, __VA_ARGS__)
-#define LOGE(...) __android_log_print(ANDROID_LOG_ERROR, LOG_TAG, __VA_ARGS__)
-#define LOGV(...) __android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG, __VA_ARGS__)
-// Android stuff end
 
-// Named constants start
-#define STRUCT_ALIGN32 32
+// NOLINTBEGIN
+#define LOGI(fmt, ...) log_internal("\x1b[32m ", ANDROID_LOG_INFO, LOG_TAG, __FILE__, __LINE__, __FUNCTION__, fmt, __VA_ARGS__)
+#define LOGE(fmt, ...) log_internal("\x1b[91m ", ANDROID_LOG_ERROR, LOG_TAG, __FILE__, __LINE__, __FUNCTION__, fmt, __VA_ARGS__)
+#define LOGV(fmt, ...) log_internal("\x1b[90m ", ANDROID_LOG_VERBOSE, LOG_TAG, __FILE__, __LINE__, __FUNCTION__, fmt, __VA_ARGS__)
+// NOLINTEND
 
-#define BASE 10
-#define INPUTS 3
-#define INPUT_MAX 25
+//  Android stuff end
 
-#define BUF_DEF 1024
-// Named constants end
+typedef const char *const str_ref;
+typedef void (*Destructor)(void *);
 
-// Define convenient type
-typedef char InMatrix[INPUTS][INPUT_MAX];
+typedef struct {
+    void       *obj;
+    const char *name;
+    Destructor  func;
+} Freeable;
 
-typedef struct __attribute__((aligned(STRUCT_ALIGN32))) {
-    int64_t num_a;
-    int64_t num_b;
-    int64_t gcd;
-    int64_t mod;
-} Numbers;
+// NOLINTBEGIN
+#define TO_DFREE(var) ((Freeable){var, #var, (Destructor)free})
+#define TO_FREE(var, func) ((Freeable){var, #var, (Destructor)(void*)func})
 
-// Function declarations
-void    simplify_eq(Numbers *nums);
-int64_t get_inverse_mod(Numbers *nums);
-int64_t get_solutions(Numbers *nums, int64_t inverse_mod, int64_t results[]);
+#define FREE_ALL(...) ( \
+    free_all_impl((Freeable[]){ __VA_ARGS__ }, sizeof((Freeable[]){ __VA_ARGS__ }) / sizeof(Freeable)) \
+)
+// NOLINTEND
 
-void    populate_data(InMatrix inputs, Numbers *all_nums);
-void    sanitize_inputs(Numbers *all_nums);
-int64_t calculate_gcd(int64_t num1, int64_t num2);
+void free_all_impl(Freeable *objs, size_t obj_num);
+void log_internal(str_ref color, int priority, const char *tag, str_ref file, int line, str_ref function, str_ref fmt, ...)
+    __attribute__((format(printf, 7, 8)));
 
 #endif

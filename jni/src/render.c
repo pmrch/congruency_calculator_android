@@ -25,26 +25,26 @@ int32_t rendererInit(ANativeWindow *window, Renderer *rnd) {
 
     // Bail out early if prerequisites are not met
     if (window == NULL || rnd == NULL) {
-        LOGE("Failed to initialize renderer: Window or renderer object was NULL!");
+        LOGE("%s", "Failed to initialize renderer: Window or renderer object was NULL!");
         return 0;
     }
 
     // Acquire current display
     rnd->display = eglGetDisplay(EGL_DEFAULT_DISPLAY);
     if (rnd->display == EGL_NO_DISPLAY) {
-        LOGE("Failed to initialize EGL display!");
+        LOGE("%s", "Failed to initialize EGL display!");
         return 0;
     }
 
     // Initialize the EGL bridge
     if (!eglInitialize(rnd->display, NULL, NULL)) {
-        LOGE("Failed to initialize the EGL bride!");
+        LOGE("%s", "Failed to initialize the EGL bridge!");
         return 0;
     }
 
     // Configure EGL settings
     if (!eglChooseConfig(rnd->display, attribs, &config, 1, &num_configs)) {
-        LOGE("Failed to choose configuration!");
+        LOGE("%s", "Failed to choose configuration!");
         destroyRenderer(rnd);
         return 0;
     }
@@ -55,7 +55,7 @@ int32_t rendererInit(ANativeWindow *window, Renderer *rnd) {
     // Create EGL context
     rnd->context = eglCreateContext(rnd->display, config, EGL_NO_CONTEXT, context_attributes);
     if (rnd->context == EGL_NO_CONTEXT) {
-        LOGE("Failed to create EGL conxtext!");
+        LOGE("%s", "Failed to create EGL conxtext!");
         destroyRenderer(rnd);
         return 0;
     }
@@ -63,14 +63,14 @@ int32_t rendererInit(ANativeWindow *window, Renderer *rnd) {
     // Create the actual display surface
     rnd->surface = eglCreateWindowSurface(rnd->display, config, window, NULL);
     if (rnd->surface == EGL_NO_SURFACE) {
-        LOGE("Failed to create EGL window surface!");
+        LOGE("%s", "Failed to create EGL window surface!");
         destroyRenderer(rnd);
         return 0;
     }
 
     // Finish EGL configuration by applying all the settings
     if (!eglMakeCurrent(rnd->display, rnd->surface, rnd->surface, rnd->context)) {
-        LOGE("Failed to finalize EGL settings!");
+        LOGE("%s", "Failed to finalize EGL settings!");
         destroyRenderer(rnd);
         return 0;
     }
