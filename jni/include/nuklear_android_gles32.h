@@ -8,7 +8,7 @@
 #include <android/asset_manager.h>
 #include <android/native_window.h>
 
-/*#ifndef NK_INCLUDE_DEFAULT_ALLOCATOR
+#ifndef NK_INCLUDE_DEFAULT_ALLOCATOR
 #define NK_INCLUDE_DEFAULT_ALLOCATOR
 #endif
 #ifndef NK_INCLUDE_FONT_BAKING
@@ -19,15 +19,16 @@
 #endif
 #ifndef NK_INCLUDE_VERTEX_BUFFER_OUTPUT
 #define NK_INCLUDE_VERTEX_BUFFER_OUTPUT
-#endif*/
-
-#define NK_INCLUDE_FIXED_TYPES
-#define NK_INCLUDE_STANDARD_IO
+#endif
+#ifndef NK_INCLUDE_STANDARD_VARARGS
 #define NK_INCLUDE_STANDARD_VARARGS
-#define NK_INCLUDE_DEFAULT_ALLOCATOR
-#define NK_INCLUDE_VERTEX_BUFFER_OUTPUT
-#define NK_INCLUDE_FONT_BAKING
-#define NK_INCLUDE_DEFAULT_FONT
+#endif
+#ifndef NK_INCLUDE_FIXED_TYPES
+#define NK_INCLUDE_FIXED_TYPES
+#endif
+#ifndef NK_INCLUDE_STANDARD_IO
+#define NK_INCLUDE_STANDARD_IO
+#endif
 
 #include "nuklear.h"
 
@@ -40,8 +41,12 @@ enum nk_gles_init_state {
 #define NK_GLES32_TEXT_MAX 256
 #endif
 
+#ifndef MAX_VERTEX_BUFFER
 #define MAX_VERTEX_BUFFER  (512 * 1024)
+#endif
+#ifndef MAX_ELEMENT_BUFFER
 #define MAX_ELEMENT_BUFFER (128 * 1024)
+#endif
 
 struct nk_gles_device {
     struct nk_buffer            cmds;

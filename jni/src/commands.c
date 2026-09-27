@@ -21,6 +21,17 @@ void cmd_init_window(struct android_app *app, int32_t *rnd_init) {
     }
 }
 
+void cmd_content_rect_changed(ANativeActivity *activity, const ARect *r, ARect *g_content_rect) {
+    if (activity != NULL && r != NULL) {
+        LOGI("Detected content rectangle changes: (%d, %d, %d, %d)", r->left, r->top, r->right, r->bottom);
+
+        g_content_rect->bottom = r->bottom;
+        g_content_rect->top    = r->top;
+        g_content_rect->right  = r->right;
+        g_content_rect->left   = r->left;
+    }
+}
+
 void cmd_activity_destroyed(int32_t *g_running) {
     LOGI("%s", "Activity destroyed");
     *g_running = 0;

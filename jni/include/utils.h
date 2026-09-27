@@ -42,4 +42,7 @@ void free_all_impl(Freeable *objs, size_t obj_num);
 void log_internal(str_ref color, int priority, const char *tag, str_ref file, int line, str_ref function, str_ref fmt, ...)
     __attribute__((format(printf, 7, 8)));
 
+// Android functions
+int32_t handleInput(struct android_app *app, AInputEvent *evt);
+
 #endif

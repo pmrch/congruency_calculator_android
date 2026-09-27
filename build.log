@@ -1,0 +1,112 @@
+[arm64-v8a] Compile        : linear-congruency <= utils.c
+[arm64-v8a] Compile        : linear-congruency <= render.c
+[arm64-v8a] Compile        : linear-congruency <= input.c
+jni/src/input.c:17:127: warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+   17 |         LOGI("TOUCH action=%d x=%f y=%f", AMotionEvent_getAction(evt) & AMOTION_EVENT_ACTION_MASK, AMotionEvent_getX(evt, 0), AMotionEvent_getY(evt, 0));
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+jni/include/utils.h:16:116: note: expanded from macro 'LOGI'
+   16 | #define LOGI(fmt, ...) log_internal("\x1b[32m ", ANDROID_LOG_INFO, LOG_TAG, __FILE__, __LINE__, __FUNCTION__, fmt, __VA_ARGS__)
+      |                        ~~~~~~~~~~~~                                                                                ^~~~~~~~~~~
+jni/src/input.c:17:100: warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+   17 |         LOGI("TOUCH action=%d x=%f y=%f", AMotionEvent_getAction(evt) & AMOTION_EVENT_ACTION_MASK, AMotionEvent_getX(evt, 0), AMotionEvent_getY(evt, 0));
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+jni/include/utils.h:16:116: note: expanded from macro 'LOGI'
+   16 | #define LOGI(fmt, ...) log_internal("\x1b[32m ", ANDROID_LOG_INFO, LOG_TAG, __FILE__, __LINE__, __FUNCTION__, fmt, __VA_ARGS__)
+      |                        ~~~~~~~~~~~~                                                                                ^~~~~~~~~~~
+jni/src/input.c:27:54: warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+   27 |         LOGV("Got movement action at x=%f, y=%f", x, y);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+jni/include/utils.h:18:119: note: expanded from macro 'LOGV'
+   18 | #define LOGV(fmt, ...) log_internal("\x1b[90m ", ANDROID_LOG_VERBOSE, LOG_TAG, __FILE__, __LINE__, __FUNCTION__, fmt, __VA_ARGS__)
+      |                        ~~~~~~~~~~~~                                                                                   ^~~~~~~~~~~
+jni/src/input.c:27:51: warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+   27 |         LOGV("Got movement action at x=%f, y=%f", x, y);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+jni/include/utils.h:18:119: note: expanded from macro 'LOGV'
+   18 | #define LOGV(fmt, ...) log_internal("\x1b[90m ", ANDROID_LOG_VERBOSE, LOG_TAG, __FILE__, __LINE__, __FUNCTION__, fmt, __VA_ARGS__)
+      |                        ~~~~~~~~~~~~                                                                                   ^~~~~~~~~~~
+jni/src/input.c:30:45: warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+   30 |             LOGV("Pressed at x=%f y=%f", x, y);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+jni/include/utils.h:18:119: note: expanded from macro 'LOGV'
+   18 | #define LOGV(fmt, ...) log_internal("\x1b[90m ", ANDROID_LOG_VERBOSE, LOG_TAG, __FILE__, __LINE__, __FUNCTION__, fmt, __VA_ARGS__)
+      |                        ~~~~~~~~~~~~                                                                                   ^~~~~~~~~~~
+jni/src/input.c:30:42: warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+   30 |             LOGV("Pressed at x=%f y=%f", x, y);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+jni/include/utils.h:18:119: note: expanded from macro 'LOGV'
+   18 | #define LOGV(fmt, ...) log_internal("\x1b[90m ", ANDROID_LOG_VERBOSE, LOG_TAG, __FILE__, __LINE__, __FUNCTION__, fmt, __VA_ARGS__)
+      |                        ~~~~~~~~~~~~                                                                                   ^~~~~~~~~~~
+jni/src/input.c:37:46: warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+   37 |             LOGV("Released at x=%f y=%f", x, y);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+jni/include/utils.h:18:119: note: expanded from macro 'LOGV'
+   18 | #define LOGV(fmt, ...) log_internal("\x1b[90m ", ANDROID_LOG_VERBOSE, LOG_TAG, __FILE__, __LINE__, __FUNCTION__, fmt, __VA_ARGS__)
+      |                        ~~~~~~~~~~~~                                                                                   ^~~~~~~~~~~
+jni/src/input.c:37:43: warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+   37 |             LOGV("Released at x=%f y=%f", x, y);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+jni/include/utils.h:18:119: note: expanded from macro 'LOGV'
+   18 | #define LOGV(fmt, ...) log_internal("\x1b[90m ", ANDROID_LOG_VERBOSE, LOG_TAG, __FILE__, __LINE__, __FUNCTION__, fmt, __VA_ARGS__)
+      |                        ~~~~~~~~~~~~                                                                                   ^~~~~~~~~~~
+8 warnings generated.
+[arm64-v8a] Compile        : linear-congruency <= commands.c
+[arm64-v8a] Compile        : linear-congruency <= ui.c
+jni/src/ui.c:19:92: warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+   19 |         LOGI("NK WINDOW BOUNDS: x=%f y=%f w=%f h=%f", bounds.x, bounds.y, bounds.w, bounds.h);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+jni/include/utils.h:16:116: note: expanded from macro 'LOGI'
+   16 | #define LOGI(fmt, ...) log_internal("\x1b[32m ", ANDROID_LOG_INFO, LOG_TAG, __FILE__, __LINE__, __FUNCTION__, fmt, __VA_ARGS__)
+      |                        ~~~~~~~~~~~~                                                                                ^~~~~~~~~~~
+jni/src/ui.c:19:82: warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+   19 |         LOGI("NK WINDOW BOUNDS: x=%f y=%f w=%f h=%f", bounds.x, bounds.y, bounds.w, bounds.h);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+jni/include/utils.h:16:116: note: expanded from macro 'LOGI'
+   16 | #define LOGI(fmt, ...) log_internal("\x1b[32m ", ANDROID_LOG_INFO, LOG_TAG, __FILE__, __LINE__, __FUNCTION__, fmt, __VA_ARGS__)
+      |                        ~~~~~~~~~~~~                                                                                ^~~~~~~~~~~
+jni/src/ui.c:19:72: warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+   19 |         LOGI("NK WINDOW BOUNDS: x=%f y=%f w=%f h=%f", bounds.x, bounds.y, bounds.w, bounds.h);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+jni/include/utils.h:16:116: note: expanded from macro 'LOGI'
+   16 | #define LOGI(fmt, ...) log_internal("\x1b[32m ", ANDROID_LOG_INFO, LOG_TAG, __FILE__, __LINE__, __FUNCTION__, fmt, __VA_ARGS__)
+      |                        ~~~~~~~~~~~~                                                                                ^~~~~~~~~~~
+jni/src/ui.c:19:62: warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+   19 |         LOGI("NK WINDOW BOUNDS: x=%f y=%f w=%f h=%f", bounds.x, bounds.y, bounds.w, bounds.h);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+jni/include/utils.h:16:116: note: expanded from macro 'LOGI'
+   16 | #define LOGI(fmt, ...) log_internal("\x1b[32m ", ANDROID_LOG_INFO, LOG_TAG, __FILE__, __LINE__, __FUNCTION__, fmt, __VA_ARGS__)
+      |                        ~~~~~~~~~~~~                                                                                ^~~~~~~~~~~
+jni/src/ui.c:6:9: warning: macro is not used [-Wunused-macros]
+    6 | #define ROW_HEIGHT 75
+      |         ^
+5 warnings generated.
+[arm64-v8a] Compile        : linear-congruency <= main.c
+jni/src/main.c:85:63: warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+   85 |             LOGI("NK WINDOW: %.1f x %.1f", (float)dims.width, (float)dims.height);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+jni/include/utils.h:16:116: note: expanded from macro 'LOGI'
+   16 | #define LOGI(fmt, ...) log_internal("\x1b[32m ", ANDROID_LOG_INFO, LOG_TAG, __FILE__, __LINE__, __FUNCTION__, fmt, __VA_ARGS__)
+      |                        ~~~~~~~~~~~~                                                                                ^~~~~~~~~~~
+jni/src/main.c:85:44: warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+   85 |             LOGI("NK WINDOW: %.1f x %.1f", (float)dims.width, (float)dims.height);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+jni/include/utils.h:16:116: note: expanded from macro 'LOGI'
+   16 | #define LOGI(fmt, ...) log_internal("\x1b[32m ", ANDROID_LOG_INFO, LOG_TAG, __FILE__, __LINE__, __FUNCTION__, fmt, __VA_ARGS__)
+      |                        ~~~~~~~~~~~~                                                                                ^~~~~~~~~~~
+jni/src/main.c:86:108: warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+   86 |             LOGI("NK mouse: %.1f %.1f", userData.nkCtx->input.mouse.pos.x, userData.nkCtx->input.mouse.pos.y);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+jni/include/utils.h:16:116: note: expanded from macro 'LOGI'
+   16 | #define LOGI(fmt, ...) log_internal("\x1b[32m ", ANDROID_LOG_INFO, LOG_TAG, __FILE__, __LINE__, __FUNCTION__, fmt, __VA_ARGS__)
+      |                        ~~~~~~~~~~~~                                                                                ^~~~~~~~~~~
+jni/src/main.c:86:73: warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+   86 |             LOGI("NK mouse: %.1f %.1f", userData.nkCtx->input.mouse.pos.x, userData.nkCtx->input.mouse.pos.y);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+jni/include/utils.h:16:116: note: expanded from macro 'LOGI'
+   16 | #define LOGI(fmt, ...) log_internal("\x1b[32m ", ANDROID_LOG_INFO, LOG_TAG, __FILE__, __LINE__, __FUNCTION__, fmt, __VA_ARGS__)
+      |                        ~~~~~~~~~~~~                                                                                ^~~~~~~~~~~
+4 warnings generated.
+[arm64-v8a] Compile        : linear-congruency <= android_native_app_glue.c
+[arm64-v8a] Compile        : linear-congruency <= nuklear_android_gles32.c
+[arm64-v8a] SharedLibrary  : liblinear-congruency.so
+[arm64-v8a] Install        : liblinear-congruency.so => libs/arm64-v8a/liblinear-congruency.so
