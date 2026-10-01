@@ -17,11 +17,7 @@ void drawUi(struct nk_context *nkCtx, WindowDimensions *dims) {
         /* Display */
         struct nk_rect bounds = nk_window_get_bounds(nkCtx);
         LOGI("NK WINDOW BOUNDS: x=%f y=%f w=%f h=%f", bounds.x, bounds.y, bounds.w, bounds.h);
-        nk_layout_row_dynamic(nkCtx, 50, 1);
-        nk_label(nkCtx, "12345", NK_TEXT_RIGHT);
 
-        if (nk_button_label(nkCtx, "TEST")) { LOGI("%s", "TEST CLICK"); }
-        /*
         nk_layout_row_dynamic(nkCtx, ROW_HEIGHT, 4);
 
         // clang-format off
@@ -52,7 +48,6 @@ void drawUi(struct nk_context *nkCtx, WindowDimensions *dims) {
         if (nk_button_label(nkCtx, "C")) {  }
 
         // clang-format on
-        */
     }
 
     nk_end(nkCtx);

@@ -27,11 +27,11 @@ mkdir -p "build/apk/lib" "build/res-compiled"
 
 # build shared lib with ndk-build
 echo "Building sources..."
-sleep 5
+sleep 1
 
 bear -- $ANDROID_NDK_HOME/ndk-build -j$(nproc) NDK_DEBUG=1 2>&1 | tee build.log
 echo "Successfully built source code!"
-sleep 2
+sleep 1
 
 # copy .so to build/apk/lib/$target_libcpp (this directory hierarchy is necessary so don't change it!)
 cp -a libs/$target_libcpp build/apk/lib

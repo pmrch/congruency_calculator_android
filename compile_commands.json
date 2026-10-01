@@ -1,7 +1,12 @@
 [
   {
+    "file": "jni/src/android_native_app_glue.c",
     "arguments": [
-      "/home/patrik/.local/AndroidNdkEnv/android-sdk/ndk/30.0.16248370/toolchains/llvm/prebuilt/linux-x86_64/bin/clang",
+      "/home/patrik/code/androidNdkDev/android-sdk/ndk/30.0.16248370/toolchains/llvm/prebuilt/linux-x86_64/bin/clang",
+      "-MMD",
+      "-MP",
+      "-MF",
+      "./obj/local/arm64-v8a/objs/linear-congruency/src/android_native_app_glue.o.d",
       "-target",
       "aarch64-none-linux-android24",
       "-fdata-sections",
@@ -10,7 +15,7 @@
       "-funwind-tables",
       "-no-canonical-prefixes",
       "--sysroot",
-      "/home/patrik/.local/AndroidNdkEnv/android-sdk/ndk/30.0.16248370/toolchains/llvm/prebuilt/linux-x86_64/sysroot",
+      "/home/patrik/code/androidNdkDev/android-sdk/ndk/30.0.16248370/toolchains/llvm/prebuilt/linux-x86_64/sysroot",
       "-g",
       "-Wno-invalid-command-line-argument",
       "-Wno-unused-command-line-argument",
@@ -31,17 +36,21 @@
       "-Wformat",
       "-Werror=format-security",
       "-c",
+      "jni/src/android_native_app_glue.c",
       "-o",
-      "./obj/local/arm64-v8a/objs/linear-congruency/src/commands.o",
-      "jni/src/commands.c"
+      "./obj/local/arm64-v8a/objs/linear-congruency/src/android_native_app_glue.o"
     ],
-    "directory": "/home/patrik/code/C/congruency_calculator_android",
-    "file": "/home/patrik/code/C/congruency_calculator_android/jni/src/commands.c",
-    "output": "/home/patrik/code/C/congruency_calculator_android/obj/local/arm64-v8a/objs/linear-congruency/src/commands.o"
+    "directory": "/home/patrik/code/CongruencyCalculatorAndroid",
+    "output": "./obj/local/arm64-v8a/objs/linear-congruency/src/android_native_app_glue.o"
   },
   {
+    "file": "jni/src/commands.c",
     "arguments": [
-      "/home/patrik/.local/AndroidNdkEnv/android-sdk/ndk/30.0.16248370/toolchains/llvm/prebuilt/linux-x86_64/bin/clang",
+      "/home/patrik/code/androidNdkDev/android-sdk/ndk/30.0.16248370/toolchains/llvm/prebuilt/linux-x86_64/bin/clang",
+      "-MMD",
+      "-MP",
+      "-MF",
+      "./obj/local/arm64-v8a/objs/linear-congruency/src/commands.o.d",
       "-target",
       "aarch64-none-linux-android24",
       "-fdata-sections",
@@ -50,7 +59,7 @@
       "-funwind-tables",
       "-no-canonical-prefixes",
       "--sysroot",
-      "/home/patrik/.local/AndroidNdkEnv/android-sdk/ndk/30.0.16248370/toolchains/llvm/prebuilt/linux-x86_64/sysroot",
+      "/home/patrik/code/androidNdkDev/android-sdk/ndk/30.0.16248370/toolchains/llvm/prebuilt/linux-x86_64/sysroot",
       "-g",
       "-Wno-invalid-command-line-argument",
       "-Wno-unused-command-line-argument",
@@ -71,17 +80,21 @@
       "-Wformat",
       "-Werror=format-security",
       "-c",
+      "jni/src/commands.c",
       "-o",
-      "./obj/local/arm64-v8a/objs/linear-congruency/src/nuklear_android_gles32.o",
-      "jni/src/nuklear_android_gles32.c"
+      "./obj/local/arm64-v8a/objs/linear-congruency/src/commands.o"
     ],
-    "directory": "/home/patrik/code/C/congruency_calculator_android",
-    "file": "/home/patrik/code/C/congruency_calculator_android/jni/src/nuklear_android_gles32.c",
-    "output": "/home/patrik/code/C/congruency_calculator_android/obj/local/arm64-v8a/objs/linear-congruency/src/nuklear_android_gles32.o"
+    "directory": "/home/patrik/code/CongruencyCalculatorAndroid",
+    "output": "./obj/local/arm64-v8a/objs/linear-congruency/src/commands.o"
   },
   {
+    "file": "jni/src/input.c",
     "arguments": [
-      "/home/patrik/.local/AndroidNdkEnv/android-sdk/ndk/30.0.16248370/toolchains/llvm/prebuilt/linux-x86_64/bin/clang",
+      "/home/patrik/code/androidNdkDev/android-sdk/ndk/30.0.16248370/toolchains/llvm/prebuilt/linux-x86_64/bin/clang",
+      "-MMD",
+      "-MP",
+      "-MF",
+      "./obj/local/arm64-v8a/objs/linear-congruency/src/input.o.d",
       "-target",
       "aarch64-none-linux-android24",
       "-fdata-sections",
@@ -90,7 +103,7 @@
       "-funwind-tables",
       "-no-canonical-prefixes",
       "--sysroot",
-      "/home/patrik/.local/AndroidNdkEnv/android-sdk/ndk/30.0.16248370/toolchains/llvm/prebuilt/linux-x86_64/sysroot",
+      "/home/patrik/code/androidNdkDev/android-sdk/ndk/30.0.16248370/toolchains/llvm/prebuilt/linux-x86_64/sysroot",
       "-g",
       "-Wno-invalid-command-line-argument",
       "-Wno-unused-command-line-argument",
@@ -111,17 +124,21 @@
       "-Wformat",
       "-Werror=format-security",
       "-c",
+      "jni/src/input.c",
       "-o",
-      "./obj/local/arm64-v8a/objs/linear-congruency/src/android_native_app_glue.o",
-      "jni/src/android_native_app_glue.c"
+      "./obj/local/arm64-v8a/objs/linear-congruency/src/input.o"
     ],
-    "directory": "/home/patrik/code/C/congruency_calculator_android",
-    "file": "/home/patrik/code/C/congruency_calculator_android/jni/src/android_native_app_glue.c",
-    "output": "/home/patrik/code/C/congruency_calculator_android/obj/local/arm64-v8a/objs/linear-congruency/src/android_native_app_glue.o"
+    "directory": "/home/patrik/code/CongruencyCalculatorAndroid",
+    "output": "./obj/local/arm64-v8a/objs/linear-congruency/src/input.o"
   },
   {
+    "file": "jni/src/main.c",
     "arguments": [
-      "/home/patrik/.local/AndroidNdkEnv/android-sdk/ndk/30.0.16248370/toolchains/llvm/prebuilt/linux-x86_64/bin/clang",
+      "/home/patrik/code/androidNdkDev/android-sdk/ndk/30.0.16248370/toolchains/llvm/prebuilt/linux-x86_64/bin/clang",
+      "-MMD",
+      "-MP",
+      "-MF",
+      "./obj/local/arm64-v8a/objs/linear-congruency/src/main.o.d",
       "-target",
       "aarch64-none-linux-android24",
       "-fdata-sections",
@@ -130,7 +147,7 @@
       "-funwind-tables",
       "-no-canonical-prefixes",
       "--sysroot",
-      "/home/patrik/.local/AndroidNdkEnv/android-sdk/ndk/30.0.16248370/toolchains/llvm/prebuilt/linux-x86_64/sysroot",
+      "/home/patrik/code/androidNdkDev/android-sdk/ndk/30.0.16248370/toolchains/llvm/prebuilt/linux-x86_64/sysroot",
       "-g",
       "-Wno-invalid-command-line-argument",
       "-Wno-unused-command-line-argument",
@@ -151,17 +168,21 @@
       "-Wformat",
       "-Werror=format-security",
       "-c",
+      "jni/src/main.c",
       "-o",
-      "./obj/local/arm64-v8a/objs/linear-congruency/src/input.o",
-      "jni/src/input.c"
+      "./obj/local/arm64-v8a/objs/linear-congruency/src/main.o"
     ],
-    "directory": "/home/patrik/code/C/congruency_calculator_android",
-    "file": "/home/patrik/code/C/congruency_calculator_android/jni/src/input.c",
-    "output": "/home/patrik/code/C/congruency_calculator_android/obj/local/arm64-v8a/objs/linear-congruency/src/input.o"
+    "directory": "/home/patrik/code/CongruencyCalculatorAndroid",
+    "output": "./obj/local/arm64-v8a/objs/linear-congruency/src/main.o"
   },
   {
+    "file": "jni/src/nuklear_android_gles32.c",
     "arguments": [
-      "/home/patrik/.local/AndroidNdkEnv/android-sdk/ndk/30.0.16248370/toolchains/llvm/prebuilt/linux-x86_64/bin/clang",
+      "/home/patrik/code/androidNdkDev/android-sdk/ndk/30.0.16248370/toolchains/llvm/prebuilt/linux-x86_64/bin/clang",
+      "-MMD",
+      "-MP",
+      "-MF",
+      "./obj/local/arm64-v8a/objs/linear-congruency/src/nuklear_android_gles32.o.d",
       "-target",
       "aarch64-none-linux-android24",
       "-fdata-sections",
@@ -170,7 +191,7 @@
       "-funwind-tables",
       "-no-canonical-prefixes",
       "--sysroot",
-      "/home/patrik/.local/AndroidNdkEnv/android-sdk/ndk/30.0.16248370/toolchains/llvm/prebuilt/linux-x86_64/sysroot",
+      "/home/patrik/code/androidNdkDev/android-sdk/ndk/30.0.16248370/toolchains/llvm/prebuilt/linux-x86_64/sysroot",
       "-g",
       "-Wno-invalid-command-line-argument",
       "-Wno-unused-command-line-argument",
@@ -191,17 +212,21 @@
       "-Wformat",
       "-Werror=format-security",
       "-c",
+      "jni/src/nuklear_android_gles32.c",
       "-o",
-      "./obj/local/arm64-v8a/objs/linear-congruency/src/ui.o",
-      "jni/src/ui.c"
+      "./obj/local/arm64-v8a/objs/linear-congruency/src/nuklear_android_gles32.o"
     ],
-    "directory": "/home/patrik/code/C/congruency_calculator_android",
-    "file": "/home/patrik/code/C/congruency_calculator_android/jni/src/ui.c",
-    "output": "/home/patrik/code/C/congruency_calculator_android/obj/local/arm64-v8a/objs/linear-congruency/src/ui.o"
+    "directory": "/home/patrik/code/CongruencyCalculatorAndroid",
+    "output": "./obj/local/arm64-v8a/objs/linear-congruency/src/nuklear_android_gles32.o"
   },
   {
+    "file": "jni/src/render.c",
     "arguments": [
-      "/home/patrik/.local/AndroidNdkEnv/android-sdk/ndk/30.0.16248370/toolchains/llvm/prebuilt/linux-x86_64/bin/clang",
+      "/home/patrik/code/androidNdkDev/android-sdk/ndk/30.0.16248370/toolchains/llvm/prebuilt/linux-x86_64/bin/clang",
+      "-MMD",
+      "-MP",
+      "-MF",
+      "./obj/local/arm64-v8a/objs/linear-congruency/src/render.o.d",
       "-target",
       "aarch64-none-linux-android24",
       "-fdata-sections",
@@ -210,7 +235,7 @@
       "-funwind-tables",
       "-no-canonical-prefixes",
       "--sysroot",
-      "/home/patrik/.local/AndroidNdkEnv/android-sdk/ndk/30.0.16248370/toolchains/llvm/prebuilt/linux-x86_64/sysroot",
+      "/home/patrik/code/androidNdkDev/android-sdk/ndk/30.0.16248370/toolchains/llvm/prebuilt/linux-x86_64/sysroot",
       "-g",
       "-Wno-invalid-command-line-argument",
       "-Wno-unused-command-line-argument",
@@ -231,17 +256,21 @@
       "-Wformat",
       "-Werror=format-security",
       "-c",
+      "jni/src/render.c",
       "-o",
-      "./obj/local/arm64-v8a/objs/linear-congruency/src/main.o",
-      "jni/src/main.c"
+      "./obj/local/arm64-v8a/objs/linear-congruency/src/render.o"
     ],
-    "directory": "/home/patrik/code/C/congruency_calculator_android",
-    "file": "/home/patrik/code/C/congruency_calculator_android/jni/src/main.c",
-    "output": "/home/patrik/code/C/congruency_calculator_android/obj/local/arm64-v8a/objs/linear-congruency/src/main.o"
+    "directory": "/home/patrik/code/CongruencyCalculatorAndroid",
+    "output": "./obj/local/arm64-v8a/objs/linear-congruency/src/render.o"
   },
   {
+    "file": "jni/src/ui.c",
     "arguments": [
-      "/home/patrik/.local/AndroidNdkEnv/android-sdk/ndk/30.0.16248370/toolchains/llvm/prebuilt/linux-x86_64/bin/clang",
+      "/home/patrik/code/androidNdkDev/android-sdk/ndk/30.0.16248370/toolchains/llvm/prebuilt/linux-x86_64/bin/clang",
+      "-MMD",
+      "-MP",
+      "-MF",
+      "./obj/local/arm64-v8a/objs/linear-congruency/src/ui.o.d",
       "-target",
       "aarch64-none-linux-android24",
       "-fdata-sections",
@@ -250,7 +279,7 @@
       "-funwind-tables",
       "-no-canonical-prefixes",
       "--sysroot",
-      "/home/patrik/.local/AndroidNdkEnv/android-sdk/ndk/30.0.16248370/toolchains/llvm/prebuilt/linux-x86_64/sysroot",
+      "/home/patrik/code/androidNdkDev/android-sdk/ndk/30.0.16248370/toolchains/llvm/prebuilt/linux-x86_64/sysroot",
       "-g",
       "-Wno-invalid-command-line-argument",
       "-Wno-unused-command-line-argument",
@@ -271,17 +300,21 @@
       "-Wformat",
       "-Werror=format-security",
       "-c",
+      "jni/src/ui.c",
       "-o",
-      "./obj/local/arm64-v8a/objs/linear-congruency/src/utils.o",
-      "jni/src/utils.c"
+      "./obj/local/arm64-v8a/objs/linear-congruency/src/ui.o"
     ],
-    "directory": "/home/patrik/code/C/congruency_calculator_android",
-    "file": "/home/patrik/code/C/congruency_calculator_android/jni/src/utils.c",
-    "output": "/home/patrik/code/C/congruency_calculator_android/obj/local/arm64-v8a/objs/linear-congruency/src/utils.o"
+    "directory": "/home/patrik/code/CongruencyCalculatorAndroid",
+    "output": "./obj/local/arm64-v8a/objs/linear-congruency/src/ui.o"
   },
   {
+    "file": "jni/src/utils.c",
     "arguments": [
-      "/home/patrik/.local/AndroidNdkEnv/android-sdk/ndk/30.0.16248370/toolchains/llvm/prebuilt/linux-x86_64/bin/clang",
+      "/home/patrik/code/androidNdkDev/android-sdk/ndk/30.0.16248370/toolchains/llvm/prebuilt/linux-x86_64/bin/clang",
+      "-MMD",
+      "-MP",
+      "-MF",
+      "./obj/local/arm64-v8a/objs/linear-congruency/src/utils.o.d",
       "-target",
       "aarch64-none-linux-android24",
       "-fdata-sections",
@@ -290,7 +323,7 @@
       "-funwind-tables",
       "-no-canonical-prefixes",
       "--sysroot",
-      "/home/patrik/.local/AndroidNdkEnv/android-sdk/ndk/30.0.16248370/toolchains/llvm/prebuilt/linux-x86_64/sysroot",
+      "/home/patrik/code/androidNdkDev/android-sdk/ndk/30.0.16248370/toolchains/llvm/prebuilt/linux-x86_64/sysroot",
       "-g",
       "-Wno-invalid-command-line-argument",
       "-Wno-unused-command-line-argument",
@@ -311,12 +344,11 @@
       "-Wformat",
       "-Werror=format-security",
       "-c",
+      "jni/src/utils.c",
       "-o",
-      "./obj/local/arm64-v8a/objs/linear-congruency/src/render.o",
-      "jni/src/render.c"
+      "./obj/local/arm64-v8a/objs/linear-congruency/src/utils.o"
     ],
-    "directory": "/home/patrik/code/C/congruency_calculator_android",
-    "file": "/home/patrik/code/C/congruency_calculator_android/jni/src/render.c",
-    "output": "/home/patrik/code/C/congruency_calculator_android/obj/local/arm64-v8a/objs/linear-congruency/src/render.o"
+    "directory": "/home/patrik/code/CongruencyCalculatorAndroid",
+    "output": "./obj/local/arm64-v8a/objs/linear-congruency/src/utils.o"
   }
 ]

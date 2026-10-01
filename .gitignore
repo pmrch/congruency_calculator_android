@@ -1,4 +1,15 @@
+libs/**.so
 libs/**
+libs
+
 obj/**
+obj
+
+build 
 build/**
+build/*.apk
+
 .cache/**
+**/*.zip
+**/*.log
+
